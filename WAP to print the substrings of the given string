@@ -1,0 +1,88 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the string: ");
+        String str = sc.nextLine();
+
+        System.out.println("Substrings are:");
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i; j < str.length(); j++) {
+                System.out.println(str.substring(i, j + 1));
+            }
+        }
+
+        sc.close();
+    }
+}
+Enter the string:
+Hello world
+Substrings are:
+H
+He
+Hel
+Hell
+Hello
+Hello 
+Hello w
+Hello wo
+Hello wor
+Hello worl
+Hello world
+e
+el
+ell
+ello
+ello 
+ello w
+ello wo
+ello wor
+ello worl
+ello world
+l
+ll
+llo
+llo 
+llo w
+llo wo
+llo wor
+llo worl
+llo world
+l
+lo
+lo 
+lo w
+lo wo
+lo wor
+lo worl
+lo world
+o
+o 
+o w
+o wo
+o wor
+o worl
+o world
+ 
+ w
+ wo
+ wor
+ worl
+ world
+w
+wo
+wor
+worl
+world
+o
+or
+orl
+orld
+r
+rl
+rld
+l
+ld
+d
