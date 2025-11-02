@@ -1,0 +1,36 @@
+// Importing Scanner class to take input from the user
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating Scanner object to read input from user
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompting user to enter a string
+        System.out.println("Enter the string");
+        
+        // Reading the entire line of input as a string
+        String input = scanner.nextLine();
+        
+        // Variable to hold each character temporarily
+        char ch;
+        
+        // Variable to store the reversed string
+        String nstr = "";
+        
+        // Loop through each character of the string
+        for(int i = 0; i < input.length(); i++) {
+            // Extract character at position i
+            ch = input.charAt(i);
+            // Add the character to the front of the new string
+            nstr = ch + nstr;
+        }
+        
+        // Display the reversed string
+        System.out.println("Reversed String is :" + nstr);
+    }
+}
+*************************
+output:
+Enter the string:Sneja
+Reveresed String is :ajenS
