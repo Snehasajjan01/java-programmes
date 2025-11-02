@@ -33,3 +33,58 @@ Happy Ganesh Chatuthi
 Words: [Happy, Ganesh, Chatuthi]
 Reversed words: 
 yppaH hsenaG ihtutahC 
+-----------------------------------------------------------------------------------------------------------------------------------
+// Importing Scanner class to take input from the user
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Asking user to enter a sentence
+        System.out.println("Enter a sentence:");
+        String inputString = scanner.nextLine();
+        
+        // Calling the method to reverse each word
+        reverseEachWordOfString(inputString);
+        
+        // Closing scanner (good practice)
+        scanner.close();
+    }
+
+    // Method to reverse each word in the given string
+    static void reverseEachWordOfString(String inputString) {
+        // Split the input string into words
+        String[] words = inputString.split(" ");
+        
+        // Variable to store the final reversed string
+        String reverseString = "";
+        
+        // Loop through each word
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            String nstr = ""; // to hold reversed word
+            char ch;
+            
+            // Reverse the current word
+            for (int j = 0; j < word.length(); j++) {
+                ch = word.charAt(j);
+                nstr = ch + nstr;
+            }
+            
+            // Add the reversed word to the final string
+            reverseString = reverseString + nstr + " ";
+        }
+        
+        // Display the results
+        System.out.println("Original String: " + inputString);
+        System.out.println("Reversed Words: " + reverseString.trim());
+    }
+}
+
+Enter a sentence:
+Original String: hey how are you?
+Reversed Words: yeh woh era ?uoy
+
+
