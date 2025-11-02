@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Scanner object to take input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Take first string input
+        System.out.print("Enter first string: ");
+        String str1 = scanner.nextLine();
+
+        // Take second string input
+        System.out.print("Enter second string: ");
+        String str2 = scanner.nextLine();
+
+        // Display strings before swapping
+        System.out.println("Before swapping: str1 = " + str1 + ", str2 = " + str2);
+
+        // Concatenate str1 and str2 and store it in str1
+        str1 = str1 + str2;  // Now str1 contains both strings together
+
+        // Extract the original str1 part into str2
+        str2 = str1.substring(0, str1.length() - str2.length());
+
+        // Extract the original str2 part into str1
+        str1 = str1.substring(str2.length());
+
+        // Display strings after swapping
+        System.out.println("After swapping: str1 = " + str1 + ", str2 = " + str2);
+
+        // Close the scanner to avoid memory leak
+        scanner.close();
+    }
+}
+Enter first string:  Hello
+Enter second string:  World
+Before swapping: str1=hello,str2=world
+After swapping:str1world,str2=hello
