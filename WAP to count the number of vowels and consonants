@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();  // Take input from user
+        vowelConsonantCount(str);
+        sc.close();
+    }
+
+    static void vowelConsonantCount(String str) {
+        int vowels = 0, consonants = 0;
+        str = str.toLowerCase();
+
+        for (char c : str.toCharArray()) {
+            if (c >= 'a' && c <= 'z') { // Only count letters
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
+        }
+
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+    }
+}
+Enter a string: Kishan
+Vowels: 2
+Consonants: 4
